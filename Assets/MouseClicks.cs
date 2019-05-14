@@ -11,7 +11,7 @@ public class MouseClicks : MonoBehaviour
     {
         renderer = GetComponent<Renderer>();
     }
-
+    
     // Update is called once per frame
     void Update()
     {
@@ -28,5 +28,8 @@ public class MouseClicks : MonoBehaviour
         }
         counter++;
         counter = counter % 3;
+
+        //Add rigibody properties
+        GetComponent<Rigidbody>().AddForce(transform.forward * 500);
     }
 }
